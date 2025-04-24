@@ -1,0 +1,1 @@
+curl "file://${PWD}/storage.json" | jq ".$1.value" | tr -d '"' | pbcopy
