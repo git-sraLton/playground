@@ -4,11 +4,14 @@
 
 Damit F12 auch die Konsole im Browser öffnet und nicht die Lautstärke verstellt ;)
 
-Diese Zeile in .bash_profile hinzufügen:
+```bash
+sudo touch /etc/modprobe.d/hid_apple.conf
+```
+
+Diese Zeile in hid_apple.conf hinzufügen:
 
 ```bash
-# Use function keys correct ;)
-echo 2 > /sys/module/hid_apple/parameters/fnmode
+options hid_apple fnmode=2
 ```
 
 ## Keys anpassen
